@@ -1,0 +1,200 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, a4paper]{article}
+\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+%\setmonofont[Scale=0.8]{Monaco}
+%%% modified by Karol Kozioł for ShareLaTeX use
+\setmainfont[
+  Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+  BoldFont=LinLibertine_RB.otf,
+  ItalicFont=LinLibertine_RI.otf,
+  BoldItalicFont=LinLibertine_RBI.otf
+]{LinLibertine_R.otf}
+\setmonofont[Scale=0.8]{DejaVuSansMono.ttf}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[%dvipdfm, 
+  bookmarks, colorlinks, breaklinks, 
+  % ---- FILL IN HERE THE TITLE AND AUTHOR
+  pdftitle={Angus Pearson - vita},
+  pdfauthor={Angus Pearson},
+  pdfproducer={http://nitens.org/taraborelli/cvtex}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% DOCUMENT
+\begin{document}
+{\huge Angus Pearson}\\[1cm]
+University of Edinburgh Undergraduate\\
+
+Phone: +44 757 890 8062\\[.2cm]
+Email: \href{mailto:a7cp3ar50n@gmail.com}{a7cp3ar50n@gmail.com}\\
+Web \& Portfolio:   \href{http://toaster.cc}{http://toaster.cc}\\
+GitHub: \href{https://github.com/AngusP}{https://github.com/AngusP} \\
+LinkedIn: \href{https://uk.linkedin.com/in/anguspearson}{https://uk.linkedin.com/in/anguspearson}\\
+
+%\vfill
+%\vspace{1cm}
+
+DoB: 1995-02-18\\
+Nationality:  British and Australian dual national
+
+%%\hrule
+\section*{Education}
+
+\years{2013-2017} BSc Hons Computer Science, University of Edinburgh\\
+
+\begin{tabular}{l}
+  \emph{Currently studying}
+\end{tabular}\\
+
+\vspace{0.2cm}
+
+\years{2011-2013} A Levels, Pangbourne College\\
+
+\begin{tabular}{l r}
+  \emph{Mathematics}     & A \\
+  \emph{Chemistry}       & A \\
+  \emph{Physics}         & B
+\end{tabular}
+
+%%\hrule
+\section*{Work \& Experience}
+\noindent
+
+\years{Jun 2016 -\\ Aug 2016} Robotical LTD Firmware \& Electronics Intern \\
+\emph{Developed the main control board for the robot, using an ARM Coretex M4 microprocessor.
+  I am continuing to develop the electronics, as well as the firmware running on the board
+  controlling the robot's movement and interpreting commands.} \\
+\href{http://robotical.io/}{http://robotical.io/}\\
+
+
+\years{2013-present} Tardis Project systems administrator \\
+\emph{The project is a long running student-led systems and network administration `sandbox' 
+  with roughly 760 registered users. Administration involves hardware management, virtualisation, 
+  networking, service deployment and maintenance. Since beginning work on the project a full migration 
+  onto new hardware has been completed.} \\
+\href{http://wiki.tardis.ed.ac.uk}{http://wiki.tardis.ed.ac.uk}\\
+
+\years{Dec 2014 -\\ Jun 2015} Full Stack Web Freelance, GPB Consulting Ltd. (Content Analysis Web Application) \\
+\emph{Development of a Natural Language processing (NLTK) and Python backend, 
+  deployed on Heroku. The web app provides a set of market-leading measures of written content 
+  readability and complexity, used by the company in providing reports for clients. It is to my 
+  knowledge the most complete collection of these metrics on the web.} \\
+\href{http://ca.gpb.eu}{http://ca.gpb.eu}\\
+
+\newpage
+
+\years{Sept 2014 -\\ May 2015} CompSoc President (Edinburgh University Computing Society) \\
+\emph{This position included the organisation of two large hackathons, `Hack the Burgh' (Major League Hacking)
+  and `The Smart Data Hack', as well as event management, financial management, logistics, marketing and sponsorship negotiation with companies including Google, Microsoft, Amazon DCS, Bloomberg and Accenture.} \\
+\href{https://comp-soc.com}{http://comp-soc.com} --
+\href{http://hacktheburgh.com}{http://hacktheburgh.com} --
+\href{http://smartdatahack.org}{http://smartdatahack.org}\\
+
+\years{2014-present} Edinsolar - University of Edinburgh Solar Car Project Firmware team lead \\
+\emph{Initially I was on the Web Team and developed the frontend of the project website. Current roles include firmware team management, co-operation with the Electrical and Business teams, developing firmware for the vehicle's control systems, and development of any design or logistical software required.} \\
+\href{http://edinsolar.org}{http://edinsolar.org} -- 
+\href{https://github.com/EdinSolar}{https://github.com/EdinSolar} \\
+
+\years{Jun 2014 -\\ Sept 2014} Front-end Web Freelance, Diamond Minding Ltd. \\
+\emph{I developed a website for the company to help them grow their business and present their services. 
+  Note that the site has been handed over but is undeployed as the company is not currently operating.} \\
+\href{http://diamondminding.github.io}{http://diamondminding.github.io} \\
+
+\years{2012} Arkwright Scholar at Stannah Lifts Group \\
+\emph{The scholarship included a 2 week internship where I developed a MP3 backed electronic sounder for a lift, 
+  that allowed sound profiles to be easily loaded via a SD card. This extended the functionality of the 
+  existing system which only produced a couple of tones to indicate state.} \\
+\href{http://www.arkwright.org.uk/}{http://www.arkwright.org.uk/}\\
+
+\years{2011-2012} Frontend Web Freelance, GPB Consulting Ltd. (Main Company Site) \\
+\emph{Development of a WordPress site for the company, with some extended functionality to handle 
+  monthly Journal publications.}\\
+\href{http://www.gpb.eu}{http://www.gpb.eu}
+
+%%%%%%%%%
+\section*{Relevant Skills}
+
+\subsection*{Programming Languages}
+
+C, Haskell, Python, HTML5, CSS3 \\
+\emph{Confident, multiple coursework assignments and own projects}\\
+Java, PHP, C++ \\
+\emph{Fairly confident, multiple coursework assignments or previous work}
+
+\subsection*{Other}
+
+Linux System Administration\\
+\emph{Confident, daily use}\\
+Basic digital electronics, Verilog (Hardware Description Language)\\
+\emph{Fairly confident, Coursework and personal time}
+
+
+%%%%%%%%%
+\section*{Extracurricular}
+
+Completed the DofE Gold and Bronze awards.
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\begin{center}
+  {
+    \scriptsize  Last updated: \today\- •\- 
+    % ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+    Typeset in \href{http://nitens.org/taraborelli/cvtex}{
+      %\fontspec{Times New Roman}
+      \XeTeX }\\ 
+    % ---- FILL IN THE FULL URL TO YOUR CV HERE
+    %\href{http://nitens.org/taraborelli/cvtex}{http://nitens.org/taraborelli/cvtex}
+  }
+\end{center}
+
+\end{document}
