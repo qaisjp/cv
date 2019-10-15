@@ -14,10 +14,11 @@
 
 \documentclass[10pt, a4paper]{article}
 \usepackage{fontspec}
+\usepackage{enumitem}
 
 % DOCUMENT LAYOUT
 \usepackage{geometry}
-\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in, top=1in, bottom=.5in}
+\geometry{a4paper, textwidth=6in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in, top=.5in, bottom=.35in}
 \setlength\parindent{0in}
 \pagenumbering{gobble}
 
@@ -48,6 +49,7 @@
 \newcommand{\years}[1]{\marginnote{\scriptsize #1}}
 \renewcommand*{\raggedleftmarginnote}{}
 \setlength{\marginparsep}{7pt}
+\setlist[itemize]{topsep=0.5em}
 \reversemarginpar
 
 % HEADINGS
@@ -81,51 +83,65 @@
 \hrule
 % \vspace{-0.5em}
 \section*{Education}
-% \vspace{-0.5em}
+\vspace{-0.5em}
 
 \years{2016 - present} BEng (Hons) Computer Science, University of Edinburgh
   --- \emph{projected 1st class Honours, July 2020}
 
-\vspace{0.1cm}
+\vspace{-0.5em}
+\begin{itemize}
+  \item Coursework: Security 99.5\%,
+                    Compilers 99.4\%,
+                    Testing 88\% (A),
+                    Operating Systems 88\% (A)
+\end{itemize}
 
-\years{2014 - 2016} Heckmondwike Grammar School (A Levels, GCSEs)
- --- \emph{A*AB -- Maths, Computing \& Further Maths}
+\vspace{-1.25em}
 
 % \hrule
-% \vspace{-0.5em}
+\vspace{-0.5em}
 \section*{Work \& Experience}
-% \vspace{-0.5em}
+\vspace{-0.5em}
 % \noindent
 
 \years{Aug 2019 -\\ present}
-Freelance Software Engineer\\
-\emph{Developing a scalabale ad campaign manager with the Amazon Ad API, GraphQL, Protobufs, and Go.}
+Freelance Software Engineer
+\begin{itemize}
+  \itemsep0em
+  \item Developing a scalable ad campaign manager in Go. \emph{Technologies: Go, GraphQL, Protobufs}
+  \item Simplified development by building an Amazon Advertising gateway API microservice.
+  \item Created filters that supports an assortment of conjunctions, disjunctions and operators.
+\end{itemize}
 
 \vspace{0.5em}
 \years{July 2019 -\\ Aug 2019} Software Engineering Intern, HENNGE, \emph{Japan} \hfill \href{https://hennge.com/global/}{hennge.com}
 
 \begin{itemize}
   \itemsep0em
-  \item Refactored database \& created a migration system for an inventory management interface.
-  \item Implemented SAML authentication for improved access management.
-  \item Deployed to production. \emph{Technologies: Go, React, PostgreSQL}
+  \item Deployed an inventory management interface to production. \emph{Tech: Go, React, PostgreSQL}
+  \item Improved security by implementing SAML authentication for access management.
+  \item Sped up dev time \& deployments by refactoring DB \& introducing a migration system.
 \end{itemize}
 
-\years{Jun 2018 -\\ Aug 2018} MyEd Development Intern, Information Services, University of Edinburgh \hfill \href{http://www.myed.ed.ac.uk/}{www.myed.ed.ac.uk}\\
-\emph{Develop React components, ran card-sorting sessions to improve UX, and created Docker environment.}
-
+\years{Jun 2018 -\\ Aug 2018} MyEd Development Intern, Information Services, University of Edinburgh \hfill \href{http://www.myed.ed.ac.uk/}{www.myed.ed.ac.uk}
+\begin{itemize}
+  \itemsep0em
+  \item Improved university portal for \textbf{590,000+} users by developing new React components.
+  \item Sped up developer onboarding by creating and documenting a Docker environment.
+  \item Optimised UX designer workflow by automating processes, also ran card-sorting sessions.
+\end{itemize}
 
 \vspace{0.5em}
-\years{Oct 2016 -\\ present \\\\President\\March 2017 -\\ May 2018} President, Technology Society, University of Edinburgh \hfill \href{https://comp-soc.com/}{comp-soc.com}
+\years{Oct 2016 -\\ present \\\\President\\2017 - 2018} President, Technology Society, University of Edinburgh \hfill \href{https://comp-soc.com/}{comp-soc.com}
 
 % \vspace{-1em}
 \begin{itemize}
   \itemsep0em
-\item As President, managed a \textbf{£30,000} budget (sponsors incl. Google, Microsoft, Amazon, JP Morgan).
-      As Hackathon Director, doubled the size of Hack the Burgh 2018 to \textbf{200} students.
-\item Created a \href{https://web.archive.org/web/20180220170809/https://comp-soc.com/hoodies-old}{hoodie customisation site} and multiple ticketing platforms with Stripe, responsible for processing over \textbf{£10,000} in payments. \emph{Python, JavaScript, Go, Stripe, Docker.}
-\item Developed the website and managed technical infrastructure for \textbf{three} hackathons (2017, 2018, 2019). \href{https://hacktheburgh.com/}{hacktheburgh.com}. \emph{Python, Django, Docker.}
-\item Held \textbf{three} roles across \textbf{four} years. Currently elected to represent all undergrads (2nd term).
+  \item \emph{Technologies: Python, Django, Docker, JavaScript, Go, Stripe.}
+  \item As President, managed a \textbf{£30,000} budget (sponsors incl. Google, Microsoft, Amazon, JP Morgan).
+  \item Processed \textbf{£15,500+} in payments by creating ticketing systems \& a \href{https://web.archive.org/web/20180220170809/https://comp-soc.com/hoodies-old}{hoodie customisation site}.
+  \item Managed website for \textbf{three} hackathons. As Director, doubled size to \textbf{200} students.
+  \item Held \textbf{three} roles across \textbf{four} years. Currently elected to represent all undergrads (2nd term).
 \end{itemize}
 
 
@@ -139,46 +155,57 @@ Freelance Software Engineer\\
 % \emph{Teach Introduction to Haskell, Intro to Linux, and Intro to Java to a cohort of \textbf{over 300} students.}\\
 
 \years{July 2014 -\\ Nov 2014} Gameplay \& UI Programmer, Those Awesome Guys, \emph{Remote}
-\hfill \href{http://www.moveordiegame.com/}{moveordiegame.com}\\
-\emph{Developed "Move or Die", a game with \textbf{700k+ owners}. Migrated project to Git. \textbf{1st} external dev.}
+\hfill \href{http://www.moveordiegame.com/}{moveordiegame.com}
+\begin{itemize}
+  \itemsep0em
+  \item Developed multiplayer game "Move or Die", \textbf{1m+ owners}. \emph{Tech: Lua, Love2D}.
+  \item Introduced Git VCS as first external developer \& training developers on using Git effectively.
+  \item Created config system that can read and rewrite a Lua config file, whilst retaining comments.
+  \item Modularised menu system, built character selection screen, and video settings screen.
+\end{itemize}
 
-\vspace{-0.5em}
+\vspace{-1.5em}
 \section*{Open Source}
-% \vspace{-0.5em}
+\vspace{-0.25em}
 
 \years{Oct 2010 -\\ present} Multi Theft Auto
 \hfill \href{https://MultiTheftAuto.com}{multitheftauto.com}
 % \vspace{-0.5em}
 \begin{itemize}
   \itemsep0em
-  \item \emph{Technologies: C++, C, Assembly, Reverse Engineering, Lua}
+  \item \emph{Technologies: C++, C, Assembly, Reverse Engineering, Lua, Go, TypeScript, Nginx, PHP}
   \item Multiplayer game enjoyed by \textbf{600,000+} per month \&
         \textbf{300,000+} per week unique users.
-  \item Responsible for \textbf{two} releases, including development, project management and PR.
-  % \item Migrated repository to GitHub and currently developing a new plugin sharing platform.
+  \item Migrated repository to GitHub and currently developing a new plugin sharing platform.
+  \item Introduced OOP-style Lua interface, added macOS server support \& improved code quality.
+  \item Responsible for most recent \textbf{two} releases, including development \& product management.
 \end{itemize}
 
 \years{Sept 2016 -\\ present} Better Informatics \& The Marauder's App
 \hfill \href{https://betterinformatics.com}{betterinformatics.com}
-% \vspace{-0.5em}
 \begin{itemize}
   \itemsep0em
   \item \emph{Technologies: Go, Jekyll, JavaScript, Python, Flask, Kerberos, LDAP, SSH, REST API.}
-\item Rebuilt and advocated course collaboration website, now used by over \textbf{1000} students.
-\item Developed authentication API that wraps around the university’s auth system (CoSign).
-\item Maintained and expanded webapp used by students to track friends and view lab availability.
+\item Rebuilt course collab \& machine availability webapp, scaling it 10x to over \textbf{1700} students.
+\item Integrated university’s SSO system (CoSign) by building a Go library \& web API
+      \href{https://github.com/qaisjp/gosign}{"gosign"}
 \end{itemize}
 
 %%%%%%%%%
+\vspace{-1.25em}
 \section*{Awards}
+\vspace{-0.5em}
 
 \years{Mar 2019}
   \emph{2nd Place Overall},
-  Shake It Off! \hfill HackCambridge 4D
+  \href{https://devpost.com/software/receipt2fitbit}{Shake It Off!}
+  \hfill HackCambridge 4D
 
 \years{Mar 2018}
   \emph{1st Place Overall},
-  Shapeshifter Invasion \hfill StudentHack 2018
+  \href{https://devpost.com/software/shapeshifter-invasion-a-collaborative-turn-based-game-szwkqj}
+    {Shapeshifter Invasion}
+  \hfill StudentHack 2018
 
 \years{Nov 2017}
   \emph{1st Place for Equal Measures 2030},
@@ -186,7 +213,8 @@ Freelance Software Engineer\\
 
 \years{Mar 2017}
   \emph{1st Place Game Track},
-  Project Minos \hfill StudentHack 2017
+  \href{https://devpost.com/software/project-minos}{Project Minos}
+  \hfill StudentHack 2017
 
 \years{2016 - present}
   \emph{Undergraduate Scholarship Recipient}
